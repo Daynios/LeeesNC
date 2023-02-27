@@ -1,6 +1,5 @@
 package Leee.nc;
 
-import Leee.nc.command.ICComand;
 import Leee.nc.command.NCCommand;
 import Leee.nc.listener.Join;
 import org.bukkit.Bukkit;
@@ -18,9 +17,6 @@ public class LeeesNC extends JavaPlugin implements Listener {
         getServer().getConsoleSender().sendMessage(prefix + "Registering command");
         Bukkit.getServer().getPluginCommand("nc").setExecutor(new NCCommand());
         Bukkit.getServer().getPluginCommand("nc").setTabCompleter(new NCCommand());
-
-        Bukkit.getServer().getPluginCommand("ic").setExecutor(new ICComand());
-        Bukkit.getServer().getPluginCommand("ic").setTabCompleter(new ICComand());
 
         getServer().getConsoleSender().sendMessage(prefix + "Finished loading! :)");
     }

@@ -18,11 +18,10 @@ import java.util.Collections;
 import java.util.List;
 
 public class NCCommand implements CommandExecutor, TabExecutor {
-    public String clickme = "Click me!";
 
     public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
         if (!(sender instanceof Player)) {
-            sender.sendMessage(ChatColor.YELLOW + "LeeesNC " + ChatColor.DARK_AQUA + "You must join the server to use this command");
+            sender.sendMessage(ChatColor.YELLOW + "LeeesNC " + ChatColor.DARK_AQUA + "You must use this command in game ");
             return false;
         } else {
             Player player = (Player) sender;
@@ -1498,7 +1497,7 @@ public class NCCommand implements CommandExecutor, TabExecutor {
 
                     
                 } else {
-                    player.sendMessage(ChatColor.YELLOW + "LeeesNC " + ChatColor.DARK_AQUA + "You must donate to the server to use this command. Type /donate to donate.");
+                    player.sendMessage(ChatColor.YELLOW + "NC " + ChatColor.DARK_AQUA + "You must vote to the server to use this command. Type /vote to vote.");
                     return true;
                 }
             } else {
@@ -1538,7 +1537,6 @@ public class NCCommand implements CommandExecutor, TabExecutor {
                 String newname = builder.toString();
 
                 player.spigot().sendMessage(new TextComponent(ChatColor.BLUE + "--------------------------------------------"));
-                player.spigot().sendMessage(new TextComponent(ChatColor.AQUA + "(( LeeesNC ))"));
                 player.spigot().sendMessage(new TextComponent(ChatColor.YELLOW + "(( /nc <colour> <type-colour> ))"));
                 player.spigot().sendMessage(new TextComponent(ChatColor.YELLOW + "(( /nc reset to reset your name ))"));
                 player.spigot().sendMessage(new TextComponent(ChatColor.AQUA + "(( Types ))"));

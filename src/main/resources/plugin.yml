@@ -9,11 +9,6 @@ commands:
   nc:
     description: Change your name color.
     aliases: [namecolor, namecolour]
-  ic:
-    description: Change your item color.
-    aliases: [itemcolor, itemcolour]
 permissions:
   Leee.nc:
     description: Gives access to changing name color via the /nc command
-  Leee.ic:
-    description: Gives access to changing item color via the /ic command
